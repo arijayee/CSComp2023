@@ -19,11 +19,26 @@ public class main {
             System.out.println("This User is Tired");
         }
     }
+    /* Write a method that takes in two numbers that represent hours worked and hourly pay. The function should return the total amount paid for the hours entered. For any hours over 40, you should receive overtime pay, which is 1.5 times the regular pay.
+ */
+public static double payDay(int hours, double pay)
+{
+    double totalPay;
+    if (hours <= 40){
+        totalPay = hours * pay;
+    }else {
+        totalPay = hours*pay;
+        totalPay= (hours-40)*(1.5*pay)+(40*pay);
+    }
+    System.out.println(totalPay);
+    return totalPay;
+}
     
 
     public static void main(String[] args) { 
         oddLength("now");
         isTired(4, true);
+        payDay(50, 10);
     }
 
     
